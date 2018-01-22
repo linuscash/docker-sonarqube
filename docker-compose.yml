@@ -2,7 +2,7 @@ version: '3'
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:10
     environment:
       - POSTGRES_USER=${DATABASE_USER}
       - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
@@ -12,7 +12,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   sonarqube:
-    image: sonarqube:latest
+    image: sonarqube:6.7
     ports:
       - "9000:9000"
       - "9092:9092"
